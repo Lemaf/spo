@@ -7,18 +7,29 @@ Script standardization of file and folder,paths. The script checks the current d
 
 ---
 
+#### Install:
+
+In spo directory:
+
+```
+./install 
+```
+
+---
+
+
 #### Usage:
 
-python spo **service** path
+spo **service** path
 
 **Example**:
 ```
-python spo sicar /var/play
+spo sicar /var/play
 ```
 or help command:
 
 ```
-python spo.py --help
+spo --help or -h
 ```
 
 
