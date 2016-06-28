@@ -9,8 +9,12 @@ Script standardization of file and folder,paths. The script checks the current d
 
 #### Usage:
 
-Work in progress
+spo **service** path
 
+**Example**:
+```
+spo sicar /var/play
+```
 
 ---
 
