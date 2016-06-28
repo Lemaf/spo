@@ -9,12 +9,19 @@ Script standardization of file and folder,paths. The script checks the current d
 
 #### Usage:
 
-spo **service** path
+python spo **service** path
 
 **Example**:
 ```
-spo sicar /var/play
+python spo sicar /var/play
 ```
+or help command:
+
+```
+python spo.py --help
+```
+
+
 
 ---
 
