@@ -1,0 +1,9 @@
+#! /bin/bash
+
+# root request
+
+uid=`id -un`
+
+if [ "$uid" != "root" ]; then
+	echo -e "\nWarning: You must be logged in as root\n"
+fi
