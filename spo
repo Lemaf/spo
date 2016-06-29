@@ -3,24 +3,36 @@
 import os
 import argparse
 import sys
+import time
+import glob
 
 # Verify root request
 os.system(". sys/sposudo")
 
 class orgFolders(object):
     """docstring for orgFolders"""
-    def __init__(self, arg):
+    def __init__(self, arg, arg2):
         super(orgFolders, self).__init__()
         self.arg = arg
+        self.arg2 = arg2
 
         # Check if directory exists
-        if not os.path.exists(self.arg):
-            os.makedirs(self.arg)
+        if not os.path.exists(self):
+            print "\nCreating directory %s and %s\n" % (self.arg, self.arg2)
+            os.makedirs(self.argh)
         else:
-            print "\nThe %s directory already exists.\n" % self.arg
+            print "\nThe %s and %s directory already exists.\n" % (self.arg, self.arg2)
+   
+    # find old files
+    def findFiles(self, old):
+        """docstring for fname"""
+        self.old = old
+        
+        print self.old
+        # Search filename 
+        # oldFile = max(glob.glob("./%s*.tar.gz") % self.old)
 
 
 #Called
-backupFolder = orgFolders("backup")
-releasesFolder = orgFolders("releases")
-
+makeFolders = orgFolders("backup", "releases")
+# makeFolders.findFiles("car")
