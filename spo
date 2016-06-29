@@ -16,9 +16,11 @@ class orgFolders(object):
         # Check if directory exists
         if not os.path.exists(self.arg):
             os.makedirs(self.arg)
+        else:
+            print "\nThe %s directory already exists.\n" % self.arg
 
 
 #Called
 backupFolder = orgFolders("backup")
-
+releasesFolder = orgFolders("releases")
 
