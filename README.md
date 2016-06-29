@@ -20,7 +20,9 @@ In spo directory:
 
 #### Usage:
 
+```
 spo **service** path
+```
 
 **Example**:
 ```
@@ -33,8 +35,8 @@ spo --help or -h
 ```
 
 
-
 ---
+
 
 #### Release v.0.1.0 features:
 * Make and move release files in releases path. 
