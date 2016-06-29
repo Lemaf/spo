@@ -19,6 +19,6 @@ class orgFolders(object):
 
 
 #Called
-x = orgFolders("backup")
+backupFolder = orgFolders("backup")
 
 
