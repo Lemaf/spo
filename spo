@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+
+import os
+import argparse
+import sys
+
+# Verify root request
+os.system(". sys/sposudo")
+
+class orgFolders(object):
+    """docstring for orgFolders"""
+    def __init__(self, arg):
+        super(orgFolders, self).__init__()
+        self.arg = arg
+
+        # Check if directory exists
+        if not os.path.exists(self.arg):
+            os.makedirs(self.arg)
+
+
+#Called
+x = orgFolders("backup")
+
+
