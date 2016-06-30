@@ -6,11 +6,13 @@ import sys
 import time
 import glob
 
-# Verify root request
-# os.system(". sys/sposudo")
 
 class orgFolders(object):
     """docstring for orgFolders"""
+
+    # Verify root request
+    os.system(". sys/sposudo")
+
     def __init__(self,arg,argv):
         super(orgFolders, self).__init__()
         self.arg = arg
