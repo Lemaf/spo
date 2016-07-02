@@ -1,23 +1,21 @@
 #!/usr/bin/env python
-# Old files (10 days) 
-# Import modules
+
 import os
 import time
- 
-# Define variables
-xdays = 10
-path  = r'.'
-now   = time.time()
- 
-# List all files older than xdays
-# print "\nList all files older than " + str(xdays) + " days"
-# print "==========================" + "=" * len(str(xdays)) + "====="
+import shutil
+import glob
 
-for root, dirs, files in os.walk(path):
-    for name in files:
-        filename = os.path.join(root, name)
-        
-        if os.stat(filename).st_mtime < now - (xdays * 86400):
-            if name.endswith("*-bkp-*"):
-                print(filename)
-	 
+# 86400 = 24 hours = 1 day
+oneday = 86400
+numdays = oneday*15
+now = time.time()
+
+# Directory name
+fileName=glob.glob("*.tar.gz")
+
+def olderFileName():
+	for x in fileName:
+		timestamp = os.path.getmtime(os.path.join(x))
+		if now-numdays > timestamp:
+			oldFiles = os.path.join(x)
+			shutil.move(oldFiles,"releases")
