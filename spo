@@ -1,37 +1,4 @@
-#!/usr/bin/env python
+#!/bin/bash
 
-import os
-import argparse
-import sys
-import time
-import glob
-
-
-class orgFolders(object):
-    """docstring for orgFolders"""
-
-    # Verify root request
-    os.system(". sys/sposudo")
-
-    def __init__(self,arg,argv):
-        super(orgFolders, self).__init__()
-        self.arg = arg
-        self.argv = argv
-
-        dirlist = [self.arg,self.argv]
-
-        # Check if directory exists
-        for dirnames in dirlist:
-            if not os.path.exists(dirnames):
-                print "\nCreating directory %s and %s\n" % (self.arg, self.argv)
-                # if not, mkdir
-                os.makedirs(dirnames)
-
-    def findOldFiles(self):
-        """docstring for findOldFiles"""
-        pass
-       
-
-#Called
-mkFolders = orgFolders("backup","releases")
-# makeFolders.findFiles("car")
+# Init python2 app
+application = python2 spoCore.py
