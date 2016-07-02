@@ -13,9 +13,10 @@ now = time.time()
 # Directory name
 dirName=glob.glob("teste*")
 
-for x in dirName:
-	timestamp = os.path.getmtime(os.path.join(x))
-	if now-numdays > timestamp:
-		oldFolders = os.path.join(x)
-		shutil.move(oldFolders,"backup")
+def olderDirName():
+	for x in dirName:
+		timestamp = os.path.getmtime(os.path.join(x))
+		if now-numdays > timestamp:
+			oldFolders = os.path.join(x)
+			shutil.move(oldFolders,"backup")
 
