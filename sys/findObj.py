@@ -17,7 +17,7 @@ def findRot(findObj,destObj,numDays):
     objName=glob.glob(findObj)
     for x in objName:
         timestamp = os.path.getmtime(os.path.join(x))
-        if now-numdays > timestamp:
+        if now-xdays > timestamp:
             oldFolders = os.path.join(x)
             shutil.move(oldFolders,destObj)
 
