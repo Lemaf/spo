@@ -1,10 +1,17 @@
 #!/usr/bin/env python
 
+# Default modules
+
 import os
 import argparse
 import sys
 import time
 import glob
+
+# SPO modules
+sys.path.append("sys/")
+from findObj import *
+
 
 
 class orgFolders(object):
@@ -29,12 +36,12 @@ class orgFolders(object):
 
     def findOldFolders(self):
         """Find old directories and move"""
-        findRot()
+        findRot("sicar-bkp*","backup",15)
        
 
     def findOldFiles(self):
         """docstring for findOldFiles"""
-        findRot()
+        findRot("*.tar.gz","releases",15)
 
     def findOldestFiles(self):
         """docstring for findOldestFiles"""
@@ -42,5 +49,6 @@ class orgFolders(object):
 
 
 #Called
-mkFolders = orgFolders("backup","releases")
+mkObj1 = orgFolders("backup","releases")
+mkObj1.findOldFolders()
 # makeFolders.findFiles("car")
