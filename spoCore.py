@@ -27,10 +27,19 @@ class orgFolders(object):
                 # if not, mkdir
                 os.makedirs(dirnames)
 
+    def findOldFolders(self):
+        """Find old directories and move"""
+        findRot()
+       
+
     def findOldFiles(self):
         """docstring for findOldFiles"""
-        pass
-       
+        findRot()
+
+    def findOldestFiles(self):
+        """docstring for findOldestFiles"""
+        findRot()
+
 
 #Called
 mkFolders = orgFolders("backup","releases")
