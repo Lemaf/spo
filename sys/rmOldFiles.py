@@ -20,4 +20,3 @@ def findRot(findObj,numDays):
         if now-xdays > timestamp:
             oldFiles = os.path.join(x)
             os.remove(oldFiles)
-
