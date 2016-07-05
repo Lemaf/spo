@@ -30,9 +30,9 @@ class orgFolders(object):
         # Check if directory exists
         for dirnames in dirlist:
             if not os.path.exists(dirnames):
-                print "\nCreating directory %s and %s\n" % (self.arg, self.argv)
                 # if not, mkdir
                 os.makedirs(dirnames)
+
 
     def findOldFolders(self):
         """Find old directories and move"""
@@ -51,4 +51,5 @@ class orgFolders(object):
 #Called
 mkObj1 = orgFolders("backup","releases")
 mkObj1.findOldFolders()
+mkObj1.findOldFiles()
 # makeFolders.findFiles("car")
