@@ -30,8 +30,9 @@ class orgFolders(object):
         # Check if directory exists
         for dirnames in dirlist:
             if not os.path.exists(dirnames):
+                # print("Creating directories %s and %s \n") % (self.arg,self.argv)
                 # if not, mkdir
-                os.makedirs(dirnames)
+                # os.makedirs(dirnames)
 
 
     def findOldFolders(self):
@@ -44,7 +45,7 @@ class orgFolders(object):
         findRot("*.tar.gz","releases",15)
 
     def findOldestFiles(self):
-        """docstring for findOldestFiles"""
+        """Find and remove oldest files"""
         findRot()
 
 
