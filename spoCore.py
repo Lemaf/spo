@@ -10,8 +10,11 @@ import glob
 
 # SPO modules
 sys.path.append("sys/")
-from findObj import *
+sys.path.append("docs")
 
+from findObj import *
+from rmOldFiles import *
+from h import *
 
 
 class orgFolders(object):
